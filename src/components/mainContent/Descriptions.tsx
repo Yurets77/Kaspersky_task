@@ -40,15 +40,17 @@ export default function Descriptions({data}:ContentComponent) {
             {expanded ? "Hide" : "Show more"}
           </button>
         )}
-                <div className="tags">
-          {Object.entries(keywordCounts).map(([key, count]) => {
-            if (count === 0) return null;
-            return (
-              <div className="tag" key={key}>
-                {key.charAt(0).toUpperCase() + key.slice(1)} <span>{count}</span>
-              </div>
-            );
-          })}
+        <div className="tags">
+          {Object.entries(keywordCounts)
+            .sort((a, b) => b[1] - a[1])
+            .map(([key, count]) => {
+              if (count === 0) return null;
+              return (
+                <div className="tag" key={key}>
+                  {key.charAt(0).toUpperCase() + key.slice(1)} <span>{count}</span>
+                </div>
+              );
+            })}
         </div>
       </>
       );
