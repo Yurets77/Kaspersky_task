@@ -160,11 +160,9 @@
   font-size: 14px;
 }
 
-/* Убираем иконку */
-.tag .anticon {
+.tag {
   display: none;
 }
-
 
 .source-button {
   margin-bottom: 12px;

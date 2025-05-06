@@ -1,14 +1,10 @@
-import { Card, Button } from 'antd';
-import {BorderOutlined} from "@ant-design/icons";
+import { Card } from 'antd';
 
-import {
-  GlobalOutlined,
-  UserOutlined,
-} from '@ant-design/icons';
 import type { IData_SnippetNews } from './data/data';
 import './App.css'
 import Header from './components/header/Header';
 import Content from './components/mainContent/Content';
+import DuplicateSecond from './components/footer/DuplicateSecond';
 
 
 const AntivirusCard = () => {
@@ -65,50 +61,7 @@ const AntivirusCard = () => {
     <Card className="antivirus-card">
     <Header data={data}/>
     <Content data={data}/>
-
-
-
-
-    {/* <div className="tags">
-      <Tag className="tag">antivirus <span>10</span></Tag>
-      <Tag className="tag">kaspersky <span>5</span></Tag>
-      <Tag className="tag">new <span>1</span></Tag>
-    </div> */}
-
-
-
-    
-      <div className="duplicates">
-        <Card className="duplicate-card" size="small">
-        <div className="header">
-          <span className="date">
-            <span className="grey">18 Jun 2024</span>
-          </span>
-          <span className="reach">
-            <span className="white">211K Reach</span>
-          </span>
-          <div className="status">
-            <span className="icon">
-                <BorderOutlined className="border-outlined"/>
-                <span className="icon-letter">i</span>
-            </span>
-            <span className="icon">
-                <BorderOutlined className="border-outlined"/>
-            </span>
-          </div>
-        </div>
-          <div className="duplicate-title">Antivirus leggero: i migliori e più efficaci (free e a pagamento) 2024</div>
-          <div className="source-info">
-            <GlobalOutlined /> <a href="#">ria.ru</a>
-            <span className="country">Austria</span>
-            <UserOutlined className="icon" /> Emily C., Taormina A., et al.
-          </div>
-        </Card>
-      </div>
-
-
-
-      <Button className="view-duplicates" type="link">▼	View Duplicates</Button>
+    <DuplicateSecond/>
     </Card>
   );
 };
